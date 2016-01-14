@@ -1,0 +1,18 @@
+#!/usr/bin/python
+#coding = utf-8
+
+def loadDataSet(fileName):
+    fr = open(fileName)
+    dataList = []
+    labelList = []
+    for line in fr.readlineis():
+                                textline = line.split(',')
+                                        lineLen = len(textline)
+                                                dataline = []
+                                                        for i in xrange(lineLen):
+                                                                        dataline.append(float(textline[i]))
+                                                                                labelList.append(float(textline[-1]))
+                                                                                        dataList.append(dataline)
+                                                                                            dataSet = mat(dataList)
+                                                                                                labels = mat(labelList).transpose()
+                                                                                                    return dataSet, labels'')
